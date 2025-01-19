@@ -1,0 +1,374 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full page height */
+}
+
+/* Import Google Font for Calligraphy */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-family: 'Dancing Script', cursive; /* Apply the calligraphy font */
+    font-size: 3rem; /* Adjusted size */
+    font-weight: bold;
+    color: #ffffff; /* Golden color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to make it pop */
+}
+
+/* Search bar styling */
+header .search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    transition: width 0.3s ease;
+}
+
+/* Add some space after the header for tagline */
+.tagline {
+    margin-top: 20px;  /* Adds space after the header */
+    text-align: center;
+}
+
+.tagline h2 {
+    font-family: 'Dancing Script', cursive; /* Apply the calligraphy font */
+    font-size: 2.5rem;
+    color: #000000;  /* Beautiful golden color for the tagline */
+    font-weight: bold; /* Makes it stand out */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to make the text pop */
+    margin-bottom: 20px;
+}
+
+/* Order Section */
+main {
+    flex-grow: 1; /* Ensures this section grows with content */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+#order-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#whatsapp-link button {
+    padding: 10px;
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Make text uppercase */
+}
+
+#whatsapp-link button:hover {
+    background-color: #128c7e;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* Changed from fixed to relative */
+    margin-top: 50px; /* Added margin above footer for extra space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .search-bar input {
+        width: 200px;
+    }
+
+    .product-item {
+        width: calc(50% - 20px);
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    header .search-bar input {
+        width: 150px;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* General Styles for Cart */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header .search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    transition: width 0.3s ease;
+}
+
+header .cart button {
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header .cart button:hover {
+    background-color: #e68900;
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+.product-item p {
+    margin: 10px 0;
+}
+
+.product-item button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+    background-color: #218838;
+}
+
+/* Cart Styles */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #28a745;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item .item-info {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.cart-item button {
+    padding: 8px 15px;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: darkred;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item .quantity input {
+    width: 40px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.checkout-button {
+    background-color: #28a745; /* Green color */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold; /* Makes the text bold */
+    text-transform: uppercase; /* Makes text uppercase */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+}
+
+.checkout-button:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+}
+
+#order-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#order-summary h3 {
+    margin-bottom: 10px;
+}
+
+#order-summary p {
+    margin: 5px 0;
+}

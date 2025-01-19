@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+      <!-- Adding Google Font for Calligraphy -->
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Eat-Repeat</h1>
+        </div>
+    </header>
+
+    <main>
+        <h2>Enter Your Details</h2>
+        <form id="checkout-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+            
+            <button type="submit">Confirm Order</button>
+        </form>
+
+        <div id="order-details" style="display:none;">
+            <h3>Order Summary</h3>
+            <p><strong>Name:</strong> <span id="order-name"></span></p>
+            <p><strong>Address:</strong> <span id="order-address"></span></p>
+            <p><strong>Items:</strong> <span id="order-items"></span></p>
+            <p><strong>Total Amount:</strong> ₹<span id="order-total"></span></p>
+            <a id="whatsapp-link" href="" target="_blank">
+                <button>Order via WhatsApp</button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Developed by @SHM</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

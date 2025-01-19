@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Repeat</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adding Google Font for Calligraphy -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Eat-Repeat</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()">
+        </div>
+        <div class="cart">
+            <button onclick="goToCart()">GO TO CART</button>
+        </div>
+    </header>
+
+    <!-- Space after header for tagline -->
+    <div class="tagline">
+        <h2>"Taste the Best, Again and Again."</h2>
+    </div>
+
+    <!-- Moving Text for Minimum Order -->
+    <b><marquee behavior="scroll" direction="left" style="background-color: #f39c12; color: rgb(0, 0, 0); font-size: 16px; padding: 10px;">
+           "Add items worth ₹300 or more to complete your order."
+    </marquee></b>
+
+    <main>
+        <div class="product-list" id="product-list">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Developed by @SHM</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
